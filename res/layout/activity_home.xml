@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Button01"
+        android:layout_marginBottom="1dp" >
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@android:color/darker_gray"
+            android:src="@drawable/traveler" />
+
+        <ImageButton
+            android:id="@+id/help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="0.98"
+            android:background="@android:color/darker_gray"
+            android:src="@android:drawable/ic_menu_help" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/mapicon128" />
+
+    <ImageButton
+        android:id="@+id/twitter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/map_button"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/map_button"
+        android:background="@android:color/transparent"
+        android:src="@drawable/twitter" />
+
+    <ImageButton
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_button"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/map_button"
+        android:background="@android:color/transparent"
+        android:src="@drawable/question_mark" />
+
+    <ImageButton
+        android:id="@+id/list_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/map_button"
+        android:layout_alignLeft="@+id/help_button"
+        android:layout_marginBottom="28dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/clipboard" />
+
+</RelativeLayout>
