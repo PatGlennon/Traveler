@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="1dp"
             android:layout_weight="1"
-            android:background="@android:color/darker_gray"
+            android:background="@color/button_background"
             android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
         <ImageView
@@ -34,48 +34,113 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
             android:layout_weight="0.98"
-            android:background="@android:color/darker_gray"
+            android:background="@color/button_background"
             android:src="@android:drawable/ic_menu_help" />
     </LinearLayout>
+    
+	<ScrollView
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_below="@+id/linearlayout1" >
 
-    <ImageButton
-        android:id="@+id/map_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearlayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="98dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/mapicon128" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <ImageButton
-        android:id="@+id/twitter_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/map_button"
-        android:layout_marginTop="17dp"
-        android:layout_toLeftOf="@+id/map_button"
-        android:background="@android:color/transparent"
-        android:src="@drawable/twitter" />
+        <TableRow
+            android:id="@+id/mapTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:background="@color/home_button_background">
 
-    <ImageButton
-        android:id="@+id/help_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/map_button"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@+id/map_button"
-        android:background="@android:color/transparent"
-        android:src="@drawable/question_mark" />
+		    <ImageButton
+		        android:id="@+id/map_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/mapicon128" />
 
-    <ImageButton
-        android:id="@+id/list_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/map_button"
-        android:layout_alignLeft="@+id/help_button"
-        android:layout_marginBottom="28dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/clipboard" />
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:text="Map"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/logTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:background="@color/home_button_background">
+		    <ImageButton
+		        android:id="@+id/list_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/clipboard" />
+
+		    <TextView
+		        android:id="@+id/textView2"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:text="Log"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/twitterTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_button_background" >
+
+		    <ImageButton
+		        android:id="@+id/twitter_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/twitter" />
+
+		    <TextView
+		        android:id="@+id/textView3"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:text="Twitter"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+		 </TableRow>
+
+		 <TableRow
+		     android:id="@+id/helpTable"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@color/home_button_background" >
+
+		    <ImageButton
+		        android:id="@+id/help_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:background="@android:color/transparent"
+		        android:src="@drawable/question_mark" />
+
+		    <TextView
+		        android:id="@+id/textView4"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:text="Help"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+		    </TableRow>
+
+    </TableLayout>
+    </ScrollView>
 
 </RelativeLayout>

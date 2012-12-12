@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:layout_marginRight="1dp"
             android:src="@drawable/ic_menu_home" 
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/button_background"/>
 
         <ImageView
             android:id="@+id/title"
@@ -34,9 +34,15 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
             android:layout_weight="0.98"
-            android:background="@android:color/darker_gray"
+            android:background="@color/button_background"
             android:src="@android:drawable/ic_menu_help" />
 
     </LinearLayout>
+    
+        <ListView
+            android:id="@+id/logList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout1" />
 
 </RelativeLayout>

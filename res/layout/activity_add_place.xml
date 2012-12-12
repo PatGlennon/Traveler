@@ -1,23 +1,25 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/linearlayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Button01"
         android:layout_marginBottom="1dp" >
 
         <ImageButton
-            android:id="@+id/home"
+            android:id="@+id/back"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="1dp"
             android:layout_weight="1"
             android:background="@color/button_background"
-            android:src="@drawable/ic_menu_home" />
+            android:src="@drawable/ic_menu_back" />
 
         <ImageView
             android:id="@+id/title"
@@ -28,39 +30,47 @@
             android:src="@drawable/traveler" />
 
         <ImageButton
-            android:id="@+id/help"
+            android:id="@+id/center"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
             android:layout_weight="0.98"
-            android:background="@color/button_background"
-            android:src="@android:drawable/ic_menu_help" />
+            android:background="@android:color/darker_gray" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView1"
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="194dp" />
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearlayout1"
-        android:layout_centerHorizontal="true"
-        android:text="Thank you for using Traveler!"
+        android:layout_weight="0"
+        android:text="Add Picture?" />
+
+    <TextView
+        android:id="@+id/datetimeplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Description Here."
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:text="Created by: Patrick Glennon"/>
+        android:text="Add Point" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
-        android:text="More Help Coming Soon!" />
-
-</RelativeLayout>
+</LinearLayout>
